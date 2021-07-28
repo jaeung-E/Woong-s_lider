@@ -1,2 +1,2 @@
 # Woong-s_lider
-Carousel slider made of only Vanilla Js
+Carousel slider made of with Vanilla Js
