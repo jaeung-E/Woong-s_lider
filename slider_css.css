@@ -13,8 +13,9 @@ header {
     font-style : italic;
 }
 
-#wrap {
+.wrap {
     width : 70%;
+    height : 100%;
     margin : 10% auto;
 }
 
@@ -23,6 +24,10 @@ header {
     margin : 10% auto;
     border : 1px solid #c4c4c4;
     overflow : hidden;
+}
+
+.content_wrap {
+    height : 100%;
 }
 
 .content {

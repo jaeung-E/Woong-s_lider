@@ -16,8 +16,6 @@
     let index = 1;
     let pageWidth = 20;
     let contentWidth = sliderWindow.offsetWidth;
-    sliderWindow.style.height = `${content[0].offsetHeight}px`;
-    contentWidth = sliderWindow.offsetWidth;
     
     content.forEach(c => c.style.width = `${contentWidth}px`);
     btn.forEach(b => b.style.top = `${sliderWindow.offsetHeight / 2 - 15}px`);
@@ -32,8 +30,6 @@
     // 리사이즈 이벤트
     (function() {
         window.addEventListener('resize', function() {
-            contentWidth = sliderWindow.offsetWidth;
-            sliderWindow.style.height = `${content[0].offsetHeight}px`;
             contentWidth = sliderWindow.offsetWidth;
 
             content.forEach(c => c.style.width = `${contentWidth}px`);
