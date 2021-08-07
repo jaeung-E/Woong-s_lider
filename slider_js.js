@@ -12,27 +12,21 @@
 
     // 각 요소 위치 및 기본값 초기화
     const contentLength = content.length;
-    const pageLength = pageBtn.length;
+    const borderWidth = 2;
     let index = 1;
-    let pageWidth = 20;
-    let contentWidth = sliderWindow.offsetWidth;
-    
-    content.forEach(c => c.style.width = `${contentWidth}px`);
-    btn.forEach(b => b.style.top = `${sliderWindow.offsetHeight / 2 - 15}px`);
-    
-    contentWrap.style.width = `${contentWidth * contentLength}px`;
-    pageBox.style.top = `${sliderWindow.offsetHeight - 30}px`;
-    nextBtn.style.left = `${contentWidth - 30}px`
-    contentWrap.style.transform = `translateX(${-contentWidth}px)`;
-    pageBox.style.width = `${pageWidth * pageLength + 10}px`;
-    prevBtn.style.left = `0px`;
+    let contentWidth = sliderWindow.offsetWidth - borderWidth;
 
     // 리사이즈 이벤트
     (function() {
         window.addEventListener('resize', function() {
-            contentWidth = sliderWindow.offsetWidth;
+            sliderWindow.style.width = '100%';
+            sliderWindow.style.height = '100%';
+            contentWidth = sliderWindow.offsetWidth - borderWidth;
 
-            content.forEach(c => c.style.width = `${contentWidth}px`);
+            content.forEach(c => { 
+                c.style.width = `${contentWidth}px`;
+                c.style.height = 'auto';
+            });
             btn.forEach(b => b.style.top = `${sliderWindow.offsetHeight / 2 - 15}px`);
 
             contentWrap.style.width = `${contentWidth * contentLength}px`;

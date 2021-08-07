@@ -22,15 +22,25 @@ header {
 .slider_window {
     position : relative;
     margin : 10% auto;
+    max-width : 800px;
+    max-height : 500px;
+    width : 800px;
+    height : 500px;
     border : 1px solid #c4c4c4;
     overflow : hidden;
 }
 
 .content_wrap {
+    width : 5600px;
     height : 100%;
+    transform : translateX(-800px);
 }
 
 .content {
+    width : 800px;
+    height : 500px;
+    max-width : 800px;
+    max-height : 500px;
     float : left;
 }
 
@@ -45,6 +55,7 @@ header {
     display : block;
     width : 30px;
     height : 30px;
+    top : 235px;
     opacity : 0.0;
     cursor : pointer;
     transition : opacity 0.5s;
@@ -57,10 +68,15 @@ header {
     height : 100%;
 }
 
+.next_btn {
+    left : 770px;
+}
+
 .page_box {
     position : absolute;
     left : 50%;
     height : 30px;
+    top : 470px;
     z-index : 1;
     text-align : center;
     font-size : 0px;
