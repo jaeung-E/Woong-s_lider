@@ -9,23 +9,22 @@ body {
     overflow-y : hidden;
 }
 
-header { 
-    margin : 5% auto 0;
-    font-family : ghanachoco;
-    font-size : 50px;
-    color : cornflowerblue;
-    font-style : italic;
-}
-
 .wrap {
     width : 70%;
     height : 100%;
     margin : 10% auto;
 }
 
+.header { 
+    font-family : ghanachoco;
+    font-size : 50px;
+    color : cornflowerblue;
+    font-style : italic;
+}
+
 .slider_window {
     position : relative;
-    margin : 10% auto;
+    margin : 5% auto;
     max-width : 800px;
     max-height : 500px;
     width : 800px;
